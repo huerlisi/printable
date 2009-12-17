@@ -5,6 +5,28 @@ module Printable
   end
 
   module ClassMethods
+    # In the controller there is a new method made available by this plugin:
+    # print_action_for(method, options = {}).
+    #
+    # Use it like this:
+    # 
+    # class InvoicesController < ApplicationController
+    #   print_action_for :shipping_document, :tray => :plain, :media => 'A5'
+    #   print_action_for :invoice, :tray => :invoice
+    #   print_action_for :reminder, :tray => :invoice
+    # 
+    #  def shipping_document
+    #     [...]
+    #   end
+    # 
+    #   def invoice
+    #     [...]
+    #   end
+    # 
+    #   def reminder
+    #     [...]
+    #   end
+    # end
     def print_action_for(method, options = {})
       define_method("print_#{method}") do
         self.send("#{method}")
