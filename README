@@ -9,7 +9,8 @@ Example
 =======
 
 In the controller there is a new method made available by this plugin:
-print_action_for(method, options = {}).
+
+* print_action_for(method, options = {})
 
 Use it like this:
 
@@ -32,4 +33,10 @@ Use it like this:
   end
 
 
-Copyright (c) 2009 Simon Hürlimann <simon.huerlimann@cyt.ch>, released under the MIT license
+License
+=======
+
+Copyright (c) 2009-2010 Simon Hürlimann <simon.huerlimann@cyt.ch>
+Copyright (c) 2009-2010 ZytoLabor <http://www.zyto-labor.com>
+
+Released under the MIT license.
